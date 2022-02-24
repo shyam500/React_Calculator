@@ -19,7 +19,7 @@ const Calculator = () => {
   };
 
   const answerFinderFunc = () => {
-    try {
+    try { 
       const ans = eval(data.join(""));
       setData(ans.toFixed(2).toString().split(""));
     } catch (err) {
