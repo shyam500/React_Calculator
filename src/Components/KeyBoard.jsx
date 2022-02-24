@@ -25,7 +25,7 @@ const btnArr = [
 
 
 const KeyBoard = (props) => {
-  const { btnFunc,ansFunc,clearFunc} = props;
+  const { btnFunc, ansFunc, clearFunc,plusMinus } = props;
 
   const buttonClickHandler = (e) => {
     btnFunc(e.target.value);
@@ -35,29 +35,46 @@ const KeyBoard = (props) => {
     ansFunc();
   };
 
-  const clearScreenHandler = ()=>{
+  const clearScreenHandler = () => {
     clearFunc();
   };
 
+  const plusMinusHandler = ()=>{
+    plusMinus();
+  }
 
   let buttons = btnArr.map((value) => {
     if (value === "=") {
-      return(<input
-        key={value}
-        value={value}
-        type="button"
-        className="btn num"
-        onClick={findAnswerHandler}
-      />);
-    } else if(value === "AC"){
-      return(<input
-        key={value}
-        value={value}
-        type="button"
-        className="btn num"
-        onClick={clearScreenHandler}
-      />);
-    }else {
+      return (
+        <input
+          key={value}
+          value={value}
+          type="button"
+          className="btn num"
+          onClick={findAnswerHandler}
+        />
+      );
+    } else if (value === "AC") {
+      return (
+        <input
+          key={value}
+          value={value}
+          type="button"
+          className="btn num"
+          onClick={clearScreenHandler}
+        />
+      );
+    } else if (value === "+/-") {
+      return (
+        <input
+          key={value}
+          value={value}
+          type="button"
+          className="btn num"
+          onClick={plusMinusHandler}
+        />
+      );
+    } else {
       return (
         <input
           key={value}
