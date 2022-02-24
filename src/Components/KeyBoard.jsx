@@ -23,8 +23,9 @@ const btnArr = [
   "=",
 ];
 
+
 const KeyBoard = (props) => {
-  const { btnFunc,ansFunc} = props;
+  const { btnFunc,ansFunc,clearFunc} = props;
 
   const buttonClickHandler = (e) => {
     btnFunc(e.target.value);
@@ -32,6 +33,10 @@ const KeyBoard = (props) => {
 
   const findAnswerHandler = () => {
     ansFunc();
+  };
+
+  const clearScreenHandler = ()=>{
+    clearFunc();
   };
 
 
@@ -44,7 +49,15 @@ const KeyBoard = (props) => {
         className="btn num"
         onClick={findAnswerHandler}
       />);
-    } else {
+    } else if(value === "AC"){
+      return(<input
+        key={value}
+        value={value}
+        type="button"
+        className="btn num"
+        onClick={clearScreenHandler}
+      />);
+    }else {
       return (
         <input
           key={value}

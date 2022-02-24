@@ -16,9 +16,13 @@ const Calculator = () => {
     setData(ans.toString().split(''));
     }
 
+    const clearScreenFunc =  () =>{
+        setData([]);
+    }
+
     return <section className='calculator'>
         <Screen screenValue={data}/>
-        <KeyBoard btnFunc={buttonValueFunc} ansFunc={answerFinderFunc}/>
+        <KeyBoard btnFunc={buttonValueFunc} ansFunc={answerFinderFunc} clearFunc={clearScreenFunc}/>
     </section>
 };
 
