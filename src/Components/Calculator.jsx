@@ -3,6 +3,7 @@ import Screen from './Screen';
 import KeyBoard from './KeyBoard';
 import { useState } from 'react';
 
+
 const Calculator = () => {
     const [data,setData] = useState([]);
 
@@ -10,10 +11,16 @@ const Calculator = () => {
        setData([...data,value]);
     }
 
+    const answerFinderFunc=()=>{
+        const ans = eval(data.join(''));
+    setData(ans.toString().split(''));
+    }
+
     return <section className='calculator'>
         <Screen screenValue={data}/>
-        <KeyBoard btnFunc={buttonValueFunc}/>
+        <KeyBoard btnFunc={buttonValueFunc} ansFunc={answerFinderFunc}/>
     </section>
 };
+
 
 export default Calculator;
