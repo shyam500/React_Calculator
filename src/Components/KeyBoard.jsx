@@ -2,24 +2,24 @@ import React, { Fragment } from "react";
 import "./KeyBoard.css";
 
 const btnArr = [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
+  "AC",
+  "%",
+  "+/-",
+  "/",
   7,
   8,
   9,
-  0,
-  "+",
-  "-",
   "*",
-  "/",
+  4,
+  5,
+  6,
+  "-",
+  1,
+  2,
+  3,
+  "+",
   ".",
-  "%",
-  "+/-",
-  "AC",
+  0,
   "=",
 ];
 
@@ -50,7 +50,7 @@ const KeyBoard = (props) => {
           key={value}
           value={value}
           type="button"
-          className="btn num"
+          className="btn eq"
           onClick={findAnswerHandler}
         />
       );
@@ -60,7 +60,7 @@ const KeyBoard = (props) => {
           key={value}
           value={value}
           type="button"
-          className="btn num"
+          className="btn ac"
           onClick={clearScreenHandler}
         />
       );

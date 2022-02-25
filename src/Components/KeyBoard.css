@@ -1,8 +1,61 @@
+:root{
+    --btn_color:rgb(182, 178, 178);
+}
+
 .key_container{
-    height: 60%;
-    width: 100%;
+    height: 350px;
+    width: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    position: absolute;
+    top: 220px;
+    background-color: rgb(27, 26, 46);
+    border-radius: 1rem;
+}
+
+.key_container > .btn{
+    width: 60px;
+    height: 50px;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: none;
+    margin: 0.1rem 0.4rem;
+    transition: 0.1s linear;
+}
+
+.key_container > .btn:active{
+    border: 5px solid rgb(6, 134, 255);
+}
+
+.key_container > .num{
+    background-color: rgb(97, 94, 245);
+    color: var(--btn_color);
+}
+
+.key_container > .num:hover{
+    background-color: var(--btn_color);
+    color: rgb(97, 94, 245);
+}
+
+.key_container > .eq{
+    width: 106px;
+    color: var(--btn_color);
+    background-color: rgb(14, 124, 38);
+}
+
+.key_container > .eq:hover{
+    background-color:var(--btn_color);
+    color:rgb(14, 124, 38);
+}
+
+.key_container > .ac{
+    color: rgb(245, 47, 47);
+}
+
+.key_container > .ac:hover{
+    background-color: rgb(245, 47, 47);
+    color: rgb(255, 255, 255);
 }
