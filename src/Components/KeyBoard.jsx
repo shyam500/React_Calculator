@@ -87,7 +87,7 @@ const KeyBoard = (props) => {
     }
   });
 
-  return <Fragment>{buttons}</Fragment>;
+  return <section className="key_container">{buttons}</section>;
 };
 
 export default KeyBoard;

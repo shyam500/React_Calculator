@@ -1,12 +1,11 @@
-import { Fragment } from "react";
-import "./Screen.jsx";
+import "./Screen.css";
 const Screen = (props) => {
   const { screenValue } = props;
 
   return (
-    <Fragment>
+    <section className="screen">
       <input type="text" readOnly placeholder="Ready to calculate"  value={screenValue.join('')}/>
-    </Fragment>
+    </section>
   );
 };
 

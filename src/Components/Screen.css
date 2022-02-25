@@ -1,0 +1,18 @@
+ .screen{
+     height: 40%;
+ }
+
+ .screen > input{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    background-color: rgb(65, 64, 64);
+    font-weight: bold;
+    color: rgb(148, 149, 151);
+ }
+
+ .screen > input:focus{
+     outline: none;
+ }
