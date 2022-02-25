@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     position: absolute;
     top: 220px;
-    background-color: rgb(27, 26, 46);
+    background-color: rgb(32, 32, 32);
     border-radius: 1rem;
 }
 
@@ -31,24 +31,24 @@
 }
 
 .key_container > .num{
+    background-color: var(--btn_color);
+    color: rgb(0, 102, 255);
+}
+
+.key_container > .num:hover{
     background-color: rgb(97, 94, 245);
     color: var(--btn_color);
 }
 
-.key_container > .num:hover{
-    background-color: var(--btn_color);
-    color: rgb(97, 94, 245);
-}
-
 .key_container > .eq{
     width: 106px;
-    color: var(--btn_color);
-    background-color: rgb(14, 124, 38);
+    background-color: var(--btn_color);
+    color: rgb(6, 134, 255);
 }
 
 .key_container > .eq:hover{
     background-color:var(--btn_color);
-    color:rgb(14, 124, 38);
+    color:rgb(1, 255, 56);
 }
 
 .key_container > .ac{
